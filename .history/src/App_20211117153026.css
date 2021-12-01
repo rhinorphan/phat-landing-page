@@ -1,0 +1,7 @@
+.active {
+  @apply py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold
+}
+
+.active2 {
+  @apply block text-sm px-2 py-4 text-white bg-green-500 font-semibold
+}

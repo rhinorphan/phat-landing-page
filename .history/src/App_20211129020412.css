@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:900');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.app {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.normalText {
+  font-family: 'VT323', monospace;
+}
+
+.header-wrap {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Press Start 2P", cursive;
+  transform: perspective(200px) rotateX(10deg);
+  letter-spacing: 0.1em;
+  user-select: none;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #004d40, 0 2px 0 #00483B, 0 3px 0 #004639, 0 4px 0 #004336, 0 5px 0 #004134, 0 6px 0 #003F32, 0 7px 0 #003D30, 0 8px 0 #003A2D, 0 9px 0 #00382B, 0 10px 0 #003528, 0 11px 0 #003225, 0 12px 0 #002F22, 0 13px 0 #002B1E, 0 14px 0 #00281C, 0 15px 0 #001F13, 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 15px rgba(0, 0, 0, 0.9), 0 11px 15px rgba(0, 0, 0, 0.9), 0 15px 20px rgba(0, 0, 0, 0.9), 0 15px 11px rgba(0, 0, 0, 0.9), 0 16px 11px rgba(0, 0, 0, 0.9);
+  transition: text-shadow 0.3s ease 0.3s, transform 0.3s ease 0.3s, letter-spacing 0.3s ease 0.3s;
+}
+.header-wrap:hover {
+  transition: text-shadow 0.33s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+  text-shadow: 0 0 0 #004134, 0 1px 0 #00483B, 0 2px 0 #003528, 0 3px 3px rgba(0, 0, 0, 0.9);
+  transform: translate(0px, 15px) perspective(200px) rotateX(10deg);
+  letter-spacing: 0.125em;
+}
+
+.active {
+  @apply py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold
+}
+
+.active2 {
+  @apply block text-sm px-2 py-4 text-white bg-green-500 font-semibold
+}
+
+.nobull {
+  list-style-type: none;
+}
+
+.pushable {
+  background: hsl(301, 100%, 38%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  background: hsl(301, 100%, 74%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+#container {
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: url('./landing-bg.png')
+    no-repeat center center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  z-index:999999;
+}
+
+div > canvas {
+  opacity: 0.55;
+}
+
+.landing__logo {
+  width: fit-content;
+}
+

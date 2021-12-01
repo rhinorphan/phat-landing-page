@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+.app {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.normalText {
+  font-family: 'VT323', monospace;
+}
+
+.active {
+  @apply py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold
+}
+
+.active2 {
+  @apply block text-sm px-2 py-4 text-white bg-green-500 font-semibold
+}
+
+.nobull {
+  list-style-type: none;
+}
+
+.pushable {
+  background: hsl(165deg 100% 31%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  background: hsl(158deg 100% 37%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+#container {
+  width: 50%;
+  height: 50%;
+  overflow: initial;
+}

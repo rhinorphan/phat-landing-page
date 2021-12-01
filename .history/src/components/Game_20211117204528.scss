@@ -1,0 +1,163 @@
+//Retro Button Styles
+
+:root {
+  --button-height: 3rem;
+  --color-text: rgba(0, 0, 0, 0.25);
+  --color-text-shadow: rgba(255, 255, 255, 0.15);
+  --color-page-bg: #b9b5aa;
+  --color-bg: #899095;
+  --color-bg-light: #969da3;
+  --color-bg-dark: #7d878f;
+  --color-overlay-light: rgba(255, 255, 255, 0.2);
+  --color-overlay-medium: rgba(0, 0, 0, 0.1);
+  --color-overlay-dark: rgba(0, 0, 0, 0.2);
+  --color-tab-focus: rgba(255, 255, 255, 0.15);
+}
+
+.red-button {
+  --color-bg: #e44e55;
+  --color-bg-light: #e47479;
+  --color-bg-dark: #d13239;
+}
+
+.green-button {
+  --color-bg: #00a07d;
+  --color-bg-light: #00af8a;
+  --color-bg-dark: #008f70;
+}
+
+.blue-button {
+  --color-bg: #0066b4;
+  --color-bg-light: #3981ca;
+  --color-bg-dark: #004ead;
+}
+
+.yellow-button {
+  --color-bg: #ffc054;
+  --color-bg-light: #ffd996;
+  --color-bg-dark: #f2aa30;
+}
+
+.retro-button {
+  position: relative;
+  appearance: none;
+  box-sizing: border-box;
+  font-size: calc(var(--button-height) / 3);
+  font-family: "Open Sans", sans-serif;
+  background: var(--color-bg);
+  height: var(--button-height);
+  min-width: var(--button-height);
+  border-radius: calc(var(--button-height) / 2);
+  border: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-shadow: 1px 1px var(--color-text-shadow);
+  cursor: pointer;
+  margin: 6px 6px;
+  letter-spacing: 0.1em;
+  transition: all 200ms ease;
+  box-shadow: -1px -1px 1px var(--color-bg),
+    //top highlight
+    0 0 0 4px var(--color-overlay-medium),
+    //outer shadow
+    1px 1px 1px var(--color-bg-dark),
+    //bottom lowlight
+    inset 0 0 0 var(--color-overlay-dark),
+    //inset shadow
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light); //button gloss
+}
+
+.retro-button::-moz-focus-inner {
+  outline: none;
+  border: none;
+}
+
+.retro-button:focus {
+  outline: none;
+  box-shadow: -1px -1px 1px var(--color-bg-dark),
+    //top highlight
+    0 0 0 4px var(--color-tab-focus),
+    //outer shadow
+    1px 1px 1px var(--color-bg-dark),
+    //bottom lowlight
+    inset 0 0 0 var(--color-overlay-dark),
+    //inset shadow
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light),
+    //button gloss
+;
+}
+
+.retro-button:hover {
+  box-shadow: -1px -1px 1px var(--color-bg-dark),
+    //top highlight
+    0 0 0 4px var(--color-overlay-dark),
+    //outer shadow
+    1px 1px 1px var(--color-bg-dark),
+    //bottom lowlight
+    inset 0 0 0 var(--color-overlay-dark),
+    //inset shadow
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light),
+    //button gloss
+;
+}
+
+.retro-button:active {
+  box-shadow: inset 1px 1px 1px var(--color-bg),
+    //top highlight
+    0 0 0 4px var(--color-overlay-dark),
+    //outer shadow
+    inset -1px -1px 1px var(--color-bg-light),
+    //bottom lowlight
+    inset 0.5rem 0.5rem 0.75rem var(--color-bg-dark),
+    //inset shadow
+    inset 0.5rem 0.5rem 0.5rem var(--color-bg-light); //button gloss
+}
+
+// Presentation Styles
+
+body {
+  background: var(--color-page-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  border: 1px solid var(--color-page-bg);
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: inset 20vw 20vw 30vw rgba(255, 255, 255, 0.05),
+    inset -20vw -20vw 30vw rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.presentation-content {
+  text-align: center;
+}
+
+.presentation-title {
+  color: rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.15);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.top-button-group {
+  display: flex;
+  padding-bottom: 1rem;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.bottom-button-group {
+  background: var(--color-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: -1px -1px 1px var(--color-bg-light),
+    inset -1px -1px 1px var(--color-bg-dark);
+}
+

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:900');
+
+.app {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.normalText {
+  font-family: 'VT323', monospace;
+}
+
+.active {
+  @apply py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold
+}
+
+.active2 {
+  @apply block text-sm px-2 py-4 text-white bg-green-500 font-semibold
+}
+
+.nobull {
+  list-style-type: none;
+}
+
+.pushable {
+  background: hsl(165deg 100% 31%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  background: hsl(158deg 100% 37%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+#container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: url('./landing-bg.png')
+    no-repeat center center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  z-index:999999;
+}
+
+div > canvas {
+  opacity: 0.55;
+}
+
+.chrome {
+  position: relative;
+  background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  font-size: 70px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+}
+
+.dreams {
+  position: absolute;
+  margin: 0px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 80px;
+  color: #ba18c9 ;
+  transform:rotate(-15deg);
+  -ms-transform:rotate(-15deg); /* IE 9 */
+  -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+  margin-left: 220px;
+  margin-top: -80px;
+  -webkit-text-stroke: 1px #f008b7;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+  z-index: 20;
+}
+
+.windows .dreams {
+  -webkit-text-stroke: 4px #f008b7;
+}
+
+@media only screen and (min-width: 600px) {
+  .chrome {
+    position: relative;
+    background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px #f5f5f5;
+    font-size: 120px;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .dreams {
+    position: absolute;
+    margin: 0px;
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 100px;
+    color: #ba18c9 ;
+    transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg); /* IE 9 */
+    -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+    margin-left: 220px;
+    margin-top: -80px;
+    -webkit-text-stroke: 1px #f008b7;
+    -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+    z-index: 20;
+  }
+  
+  .windows .dreams {
+    -webkit-text-stroke: 4px #f008b7;
+  }
+}
